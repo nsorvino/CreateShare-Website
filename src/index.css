@@ -1,0 +1,65 @@
+/* Load EB Garamond (regular + bolds) */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap");
+
+/* Tailwind (v4 syntax) */
+@import "tailwindcss";
+
+/* Tailwind theme tokens */
+@theme {
+  --color-brand-blue: #23258c;
+  --color-brand-cream: #f2ebc4;
+  --color-brand-white: #ffffff;
+  --color-brand-black: #000000;
+
+  /* Map a Tailwind font utility: font-garamond */
+  --font-garamond: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Base layout */
+html, body, #root { height: 100%; width: 100%; }
+
+/* Make EB Garamond + cream the defaults */
+:root {
+  font-family: var(--font-garamond);
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page defaults: brand-blue bg + brand-cream text */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-brand-blue);
+  color: var(--color-brand-cream);
+  display: flex;            /* if you don't want centering, remove the next 2 lines */
+  place-items: center;
+}
+
+/* Headings inherit color; tweak sizes as you like */
+h1, h2, h3, h4, h5, h6 { color: inherit; }
+
+/* Links inherit the cream color and dim on hover for subtlety */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover { opacity: 0.8; }
+
+/* Buttons inherit font; keep them on-brand */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font: inherit;
+  background-color: color-mix(in oklab, var(--color-brand-black) 85%, transparent);
+  color: var(--color-brand-cream);
+  cursor: pointer;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+button:hover { border-color: var(--color-brand-cream); opacity: 0.9; }
+button:focus,
+button:focus-visible { outline: 3px solid color-mix(in oklab, var(--color-brand-cream) 70%, transparent); }
