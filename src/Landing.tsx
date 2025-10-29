@@ -8,12 +8,13 @@ export default function Landing() {
           <div className="mx-auto mb-6 inline-flex items-center justify-center group">
             <span className="p-1 rounded-2xl bg-gradient-to-br from-brand-cream/20 via-transparent to-brand-cream/10">
               <img
-                src="/logo.jpg"
+                src="/logo_dark_blue.png"
                 alt="Amphitheater logo"
-                className="h-24 w-24 rounded-xl object-cover  ring-brand-cream/25 shadow-lg"
+                className="block w-24 h-24 rounded-xl object-cover ring-brand-cream/25 shadow-lg"
               />
             </span>
           </div>
+
 
           {/* Company name */}
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
@@ -93,7 +94,7 @@ export default function Landing() {
 
             {/* Optional one-liner blurb */}
             <p className="mt-3 text-xs text-brand-cream/70 leading-relaxed">
-              Crafting tools for creative teams.
+              where creativity meets.
             </p>
 
             {/* Hairline divider */}

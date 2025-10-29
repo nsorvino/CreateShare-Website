@@ -6,8 +6,9 @@
 
 /* Tailwind theme tokens */
 @theme {
-  --color-brand-blue: #23258c;
+  --color-brand-blue: #0f1154;
   --color-brand-cream: #f2ebc4;
+  --color-brand-silver: #9c9c9c;
   --color-brand-white: #ffffff;
   --color-brand-black: #000000;
 
@@ -63,3 +64,22 @@ button {
 button:hover { border-color: var(--color-brand-cream); opacity: 0.9; }
 button:focus,
 button:focus-visible { outline: 3px solid color-mix(in oklab, var(--color-brand-cream) 70%, transparent); }
+
+.logo-mask {
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--color-brand-cream);
+  -webkit-mask-image: url('/logo_dark_blue.png');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: url('/logo_dark_blue.png');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  /* attempt to use luminance as mask instead of alpha */
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
+}
