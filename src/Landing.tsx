@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Landing() {
   return (
     <div className="flex flex-col bg-brand-blue text-brand-cream font-garamond">
@@ -111,21 +113,21 @@ export default function Landing() {
             <h5 className="font-semibold mb-3">Social</h5>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="inline-flex items-center gap-2 hover:text-brand-cream/70">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.53 3h3.2l-7 8.01L22 21h-6.9l-4.52-5.64L4.6 21H1.4l7.51-8.6L2 3h7l4.08 5.19L17.53 3Zm-1.21 16h1.77L7.8 5h-1.8l10.32 14Z"/></svg>
-                  Twitter / X
+                <a href="https://x.com/amphitheaterapp?s=11&t=SXwkOWv0I90BfmINFcjvWQ" className="inline-flex items-center gap-2 hover:text-brand-cream/70">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.5 3h4.7l4.06 5.17L15.53 3h3.97l-6.34 7.1L22 21h-4.82l-4.57-6.01L7.4 21H3.43l6.77-7.59L2.5 3Zm3.21 2 9.94 13h2.53L8.21 5H5.71Z"/></svg>
+                  X (Twitter)
                 </a>
               </li>
               <li>
-                <a href="#" className="inline-flex items-center gap-2 hover:text-brand-cream/70">
+                <a href="https://www.linkedin.com/company/amphitheaterapp/" className="inline-flex items-center gap-2 hover:text-brand-cream/70">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5V21H3.5V8.5h3.44ZM5.22 3a2.03 2.03 0 1 1 0 4.06 2.03 2.03 0 0 1 0-4.06ZM21 13.26V21h-3.43v-6.9c0-1.64-.59-2.76-2.06-2.76-1.12 0-1.78.75-2.07 1.47-.11.27-.14.65-.14 1.03V21H9.86s.05-11.78 0-12.5h3.44v1.77c.46-.71 1.29-1.72 3.15-1.72 2.3 0 4.55 1.5 4.55 4.71Z"/></svg>
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="inline-flex items-center gap-2 hover:text-brand-cream/70">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a4.49 4.49 0 0 0-3.16-3.17C18.56 2.5 12 2.5 12 2.5s-6.56 0-8.34.53A4.49 4.49 0 0 0 .5 6.2 47.8 47.8 0 0 0 0 12a47.8 47.8 0 0 0 .5 5.8 4.49 4.49 0 0 0 3.16 3.17C5.44 21.5 12 21.5 12 21.5s6.56 0 8.34-.53a4.49 4.49 0 0 0 3.16-3.17c.33-1.88.5-3.79.5-5.8s-.17-3.92-.5-5.8ZM9.75 15.5v-7l6.25 3.5-6.25 3.5Z"/></svg>
-                  YouTube
+                <a href="https://www.instagram.com/amphitheaterapp/?igsh=OWs0ZnlsdzRybW5z#" className="inline-flex items-center gap-2 hover:text-brand-cream/70">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 2.5A4.5 4.5 0 0 0 7.5 11 4.5 4.5 0 0 0 12 15.5 4.5 4.5 0 0 0 16.5 11 4.5 4.5 0 0 0 12 6.5zm0 2A2.5 2.5 0 0 1 14.5 11 2.5 2.5 0 0 1 12 13.5 2.5 2.5 0 0 1 9.5 11 2.5 2.5 0 0 1 12 8.5zM17 6.75a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                  Instagram
                 </a>
               </li>
             </ul>
@@ -135,10 +137,16 @@ export default function Landing() {
           <nav aria-label="Company" className="text-sm">
             <h5 className="font-semibold mb-3">Company</h5>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-brand-cream/70">About</a></li>
-              <li><a href="#" className="hover:text-brand-cream/70">Careers</a></li>
-              <li><a href="#" className="hover:text-brand-cream/70">Press</a></li>
-              <li><a href="#" className="hover:text-brand-cream/70">Contact</a></li>
+              <li>
+                <Link to="/mission" className="hover:text-brand-cream/70">
+                  Our Mission
+                </Link>
+              </li>
+              <li>
+                <a href="mailto:info@amphitheaterapp.com" className="hover:text-brand-cream/70">
+                  Contact Us
+                </a>
+              </li>
             </ul>
           </nav>
 
@@ -146,9 +154,8 @@ export default function Landing() {
           <nav aria-label="Legal" className="text-sm">
             <h5 className="font-semibold mb-3">Legal</h5>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-brand-cream/70">Terms</a></li>
               <li><a href="#" className="hover:text-brand-cream/70">Privacy</a></li>
-              <li><a href="#" className="hover:text-brand-cream/70">Security</a></li>
+              <li><a href="#" className="hover:text-brand-cream/70">Terms</a></li>
               <li><a href="#" className="hover:text-brand-cream/70">Cookies</a></li>
             </ul>
           </nav>
